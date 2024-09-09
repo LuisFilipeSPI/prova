@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('./section.css');
+/*
+    --amarelo: #F7D860;
+    --destaques: #E1B12C;
+    --textoSecundario: #F0F0F0;
+    --textoPrincipal: #5C5C5C;
+    --detalhes: #FFC300;          
+
+
+    fundos: 
+    --laranja: #DE7047;
+    --pele: #FFDE8D;
+    --trueskin: #feebbc;
+    --lifelessgreen: #DCE0A0;
+    --verdeclaro: #CDDE47;
+    --verdeescuro: #528540;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Acme", sans-serif;
+    transition: 0.5s;
+    /* border: 1px solid red; */
+}
+
+h1 {
+    color: #3e3e3e;
+}
+h2 {
+    text-align: center;
+}
+h2,
+p {
+    color: #5C5C5C;
+}
+
+a,
+a:visited {
+    color: #E1B12C;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFC300;
+}
+
+header {
+    background-image: url(../img/header_background.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-top: 10px solid #528540;
+}
+
+header img {
+    width: 350px;
+    margin: 10px;
+    filter: drop-shadow(0px 0px 5px black);
+}
+header img:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+nav{
+    box-shadow: 0px 0px 20px black;
+}
+nav,
+.menu-receitas {
+    background-color: #528540;
+}
+nav li {
+    display: inline-block;
+}
+
+nav a, nav a:visited {
+    display: inline-block;
+    padding: 10px;
+    width: 180px;
+    border-bottom: 3px solid transparent;
+    color: #7fbe03;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #12420099;
+    color: #91d608;
+}
+
+main p,
+main h1,
+main h2{
+    padding: 20px;
+    border-radius: 15px;
+}
+main p, main a, main li {
+    font-size: 20px;
+}
+main h2 {
+    font-size: 25px;
+}
+main h2:hover, main li:hover {
+    color: #E1B12C;
+    background-color: #E1B12C20;
+}
+main p:hover{
+    background-color: #52854020;
+    color: #437408;
+}
+main h1 {
+    border-bottom: 2px solid #5C5C5C;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    transform: scale(0.95);
+    border-radius: 15px 15px 0px 0px;
+}
+
+main h1:hover {
+    border-bottom-color: #528540;
+    color: #528540;
+    transform: scale(1);
+    background-color: #52854020;
+}
+
+footer {
+    padding: 20px;
+    background-color: #528540;
+    text-align: center;
+}
+
+footer * {
+    padding: 5px;
+}
+
+footer p {
+    color: #F0F0F0;
+}
+footer img {
+    filter: grayscale(1);
+    width: 150px;
+}
+footer img:hover {
+    filter: none;
+}
+.menu-receitas {
+    position: absolute;
+    display: none;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 3px dashed #7fbe03;
+    z-index: 1;
+}
+
+.menu-receitas a {
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.dropdown-receitas:hover .menu-receitas {
+    display: block;
+}
