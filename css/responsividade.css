@@ -1,0 +1,48 @@
+@media screen and (min-width: 350px) and (max-width: 1000px) {
+    
+    header img {
+        width: 250px;
+    }
+    nav {
+        padding: 10px;
+    }
+    nav li {
+        margin: 5px;
+    }
+    nav a,
+    nav a:visited {
+        border: 2px dashed #00000078;
+        border-radius: 15px;
+    }
+
+    .container {
+        width: 100vw;
+        min-height: 80vh;
+        flex-direction: column;
+    }
+
+    section:nth-child(2n) .container {
+        flex-direction: column;
+    }
+
+    .container .conteudo {
+        width: 95%;
+    }
+
+    .section-3-colunas {
+        align-items: center;
+        align-content: center;
+        overflow: scroll;
+    }
+    section img, section iframe{
+        max-width: 70%;
+    }
+
+    main p,
+    main h1,
+    main h2 {
+        padding: 20px;
+        margin: 0;
+    }
+
+}

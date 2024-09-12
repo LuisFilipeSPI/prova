@@ -1,21 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('./section.css');
-/*
-    --amarelo: #F7D860;
-    --destaques: #E1B12C;
-    --textoSecundario: #F0F0F0;
-    --textoPrincipal: #5C5C5C;
-    --detalhes: #FFC300;          
-
-
-    fundos: 
-    --laranja: #DE7047;
-    --pele: #FFDE8D;
-    --trueskin: #feebbc;
-    --lifelessgreen: #DCE0A0;
-    --verdeclaro: #CDDE47;
-    --verdeescuro: #528540;
-*/
 
 * {
     margin: 0;
@@ -23,15 +6,20 @@
     box-sizing: border-box;
     font-family: "Acme", sans-serif;
     transition: 0.5s;
-    /* border: 1px solid red; */
 }
 
+html {
+    scrollbar-color: #31e880 #0c613196 ;
+    scrollbar-gutter: 16px red;
+}
 h1 {
     color: #3e3e3e;
 }
+
 h2 {
     text-align: center;
 }
+
 h2,
 p {
     color: #5C5C5C;
@@ -53,31 +41,37 @@ header {
     background-position: center;
     text-align: center;
     border-top: 10px solid #528540;
+    box-shadow: 0px 1px 10px black inset;
 }
 
 header img {
+    user-select: none;
     width: 350px;
     margin: 10px;
     filter: drop-shadow(0px 0px 5px black);
 }
+
 header img:hover {
     filter: drop-shadow(0px 0px 10px white);
 }
-nav{
-    box-shadow: 0px 0px 20px black;
+header nav {
+    box-shadow: 0px -1px 10px black;
 }
 nav,
 .menu-receitas {
     background-color: #528540;
 }
+
 nav li {
     display: inline-block;
 }
 
-nav a, nav a:visited {
+nav a,
+nav a:visited {
+    font-size: 20px;
     display: inline-block;
     padding: 10px;
-    width: 180px;
+    width: 200px;
     border-bottom: 3px solid transparent;
     color: #7fbe03;
     font-weight: bold;
@@ -90,24 +84,32 @@ nav a:hover {
 
 main p,
 main h1,
-main h2{
+main h2, .receita li:hover {
     padding: 20px;
     border-radius: 15px;
 }
-main p, main a, main li {
+
+main p,
+main a,
+main li {
     font-size: 20px;
 }
+
 main h2 {
     font-size: 25px;
 }
-main h2:hover, main li:hover {
+
+main h2:hover,
+.links li:hover {
     color: #E1B12C;
-    background-color: #E1B12C20;
+    background-color: #ffebb4;
 }
-main p:hover{
-    background-color: #52854020;
+
+main p:hover, .receita ul li:hover{
+    background-color: #daffcd;
     color: #437408;
 }
+
 main h1 {
     border-bottom: 2px solid #5C5C5C;
     text-align: center;
@@ -121,7 +123,7 @@ main h1:hover {
     border-bottom-color: #528540;
     color: #528540;
     transform: scale(1);
-    background-color: #52854020;
+    background-color: #e9ffcd;
 }
 
 footer {
@@ -137,13 +139,16 @@ footer * {
 footer p {
     color: #F0F0F0;
 }
+
 footer img {
     filter: grayscale(1);
     width: 150px;
 }
+
 footer img:hover {
     filter: none;
 }
+
 .menu-receitas {
     position: absolute;
     display: none;
@@ -160,4 +165,131 @@ footer img:hover {
 
 .dropdown-receitas:hover .menu-receitas {
     display: block;
+}
+
+main {
+    background-image: url(../img/background-brasil.png);
+    background-size: cover;
+}
+.main-receita {
+    background-image: url(../img/background.png);  
+    background-size: 900px;
+}
+section{
+    background-color: #ffffff90;
+}
+
+section:nth-child(2n) {
+    background-color: #FFDE8D90;
+}
+
+.tema-verde section:nth-child(2n) {
+    background-color: #dce0a090;
+}
+section:hover {
+    box-shadow: 0px -5px 10px #ffffff ;
+    background-color: #ffffffed;
+}
+
+section:nth-child(2n):hover {
+    box-shadow: 0px -5px 10px #FFDE8D;
+    background-color: #FFDE8Ddc;
+}
+.tema-verde section:nth-child(2n):hover {
+    box-shadow: 0px -5px 20px #dce0a0;
+    background-color: #dce0a0dc;
+}
+
+section:nth-child(2n) .container {
+    flex-direction: row-reverse;
+}
+
+.section-1-coluna {
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.section-3-colunas {
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.section-3-colunas .conteudo:nth-child(2n) {
+    text-align: center;
+}
+
+.section-3-colunas .conteudo:nth-child(3n) {
+    text-align: right;
+}
+
+.container .conteudo {
+    width: 500px;
+}
+
+section img,
+section iframe {
+    border-radius: 30px;
+    max-width: 400px;
+    transform: scale(0.99);
+}
+
+section img:hover,
+section iframe:hover {
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #CDDE47;
+}
+
+section:nth-child(2n) img:hover,
+section:nth-child(2n) iframe:hover {
+    box-shadow: 0px 0px 10px #DE7047;
+}
+
+.links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.links li {
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.receita {
+    color: #3e3e3e;
+    max-height: 500px;
+    overflow: scroll;
+    padding: 10px 50px;
+    cursor: url(../img/cursorPan.png), pointer;
+}
+
+.receita ul li::before {
+    content: '✔';
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.receita ol li::before {
+    content: '🔥';
+    font-size: 20px;
+    color: orange;
+}
+.receita ol li:hover {
+    background-color: #ffa9a9;
+    color: #742508;
 }
